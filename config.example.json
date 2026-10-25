@@ -1,0 +1,74 @@
+{
+  "onebot": {
+    "url": "ws://127.0.0.1:3001",
+    "accessToken": "",
+    "reconnectMinMs": 3000,
+    "reconnectMaxMs": 60000,
+    "apiTimeoutMs": 15000
+  },
+  "deepseek": {
+    "baseUrl": "https://api.deepseek.com",
+    "apiKey": "sk-在这里填你自己的Key",
+    "model": "deepseek-chat",
+    "temperature": 0.7,
+    "maxTokens": 800,
+    "timeoutMs": 60000,
+    "maxRetries": 2,
+    "systemPrompt": "你是一个 QQ 群里的 AI 助手，说话简洁、友好、口语化。群聊场景下不要使用 Markdown 表格和长代码块，回答尽量控制在 300 字以内。"
+  },
+  "trigger": {
+    "at": true,
+    "replyToBot": true,
+    "prefixes": ["/ai", "ai:", "AI:"],
+    "requireAtInGroup": false
+  },
+  "reply": {
+    "quote": false,
+    "atUser": true,
+    "maxChars": 1200,
+    "maxParts": 3
+  },
+  "policy": {
+    "allowedGroups": [],
+    "blockedUsers": [],
+    "contextScope": "user",
+    "maxContextTurns": 6,
+    "contextTtlMinutes": 60,
+    "cooldownSeconds": 2,
+    "maxInputChars": 2000,
+    "allowPrivate": false
+  },
+  "media": {
+    "tempDir": "tmp",
+    "transport": "file",
+    "maxBytes": 8388608
+  },
+  "speech": {
+    "enabled": true,
+    "baseUrl": "https://api.siliconflow.cn/v1",
+    "apiKey": "sk-在这里填硅基流动的Key",
+    "ttsModel": "FunAudioLLM/CosyVoice2-0.5B",
+    "voice": "FunAudioLLM/CosyVoice2-0.5B:anna",
+    "speed": 1,
+    "maxChars": 300,
+    "replyMode": "on-voice-input",
+    "asrModel": "FunAudioLLM/SenseVoiceSmall"
+  },
+  "image": {
+    "enabled": true,
+    "baseUrl": "https://api.siliconflow.cn/v1",
+    "apiKey": "",
+    "model": "Kwai-Kolors/Kolors",
+    "size": "1024x1024",
+    "steps": 20,
+    "guidance": 7.5,
+    "negativePrompt": "",
+    "prefixes": ["/draw", "/画", "画图"],
+    "timeoutMs": 120000
+  },
+  "log": {
+    "level": "info",
+    "file": "logs/bot.log",
+    "rotateBytes": 5242880
+  }
+}

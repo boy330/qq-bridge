@@ -1,0 +1,32 @@
+{
+  "name": "qq-bridge",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "把 QQ 群 / 私聊接到 DeepSeek 的 OneBot v11 桥（零第三方依赖）",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node bot.mjs",
+    "dev": "node --watch bot.mjs",
+    "test": "node test/e2e.mjs"
+  },
+  "keywords": [
+    "qq",
+    "onebot",
+    "onebot11",
+    "napcat",
+    "deepseek",
+    "chatbot",
+    "llm"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/boy330/qq-bridge.git"
+  },
+  "bugs": {
+    "url": "https://github.com/boy330/qq-bridge/issues"
+  }
+}
